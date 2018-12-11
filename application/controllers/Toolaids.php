@@ -101,6 +101,61 @@ class Toolaids extends CI_Controller {
 				redirect('toolaids/index');
 			}
 
+		}elseif(($this->input->post('section') === "meeting") && ($this->input->post('type') === "photo") || ($this->input->post('section') === "asn") && ($this->input->post('type') === "photo") || ($this->input->post('section') === "mobile") && ($this->input->post('type') === "photo") ){
+
+			$data = array();
+	       
+	        if(!empty($_FILES['userfile']['name'])){
+
+	            $filesCount = count($_FILES['userfile']['name']);
+
+	            for($i = 0; $i < $filesCount; $i++){
+	                $_FILES['file']['name']     = $_FILES['userfile']['name'][$i];
+	                $_FILES['file']['type']     = $_FILES['userfile']['type'][$i];
+	                $_FILES['file']['tmp_name'] = $_FILES['userfile']['tmp_name'][$i];
+	                $_FILES['file']['error']    = $_FILES['userfile']['error'][$i];
+	                $_FILES['file']['size']     = $_FILES['userfile']['size'][$i];
+	                
+	                $config['upload_path']          = './assets/'.$this->input->post('section').'/';
+	                $config['allowed_types'] = 'bmp|jpg|jpeg|png|gif';
+	                $config['max_size']             = 2048;
+		            $config['max_width']            = 1024;
+		            $config['max_height']           = 1024;
+		            $config['file_ext_tolower']		= TRUE;
+		            $config['remove_spaces']		= TRUE;
+		            $config['detect_mime']			= TRUE;
+		            $config['encrypt_name']			= TRUE;
+	               
+	                $this->load->library('upload', $config);
+	                $this->upload->initialize($config);
+	                
+	                if($this->upload->do_upload('file')){
+	                 
+	                    $fileData = $this->upload->data();
+	                    $uploadData[$i]['file_name'] = $fileData['file_name'];
+	                    $uploadData[$i]['created_at'] = date("Y-m-d H:i:s");
+	                    
+	                }
+	            }
+	            
+	            if(!empty($uploadData)){
+	                
+	                $this->Toolaids_model->store($uploadData,'photo',$this->input->post('section'), $filesCount);
+
+	                $this->session->set_flashdata('success', 'Successfully create post.');
+
+					redirect('toolaids/index');
+	                
+	            }else{
+
+	            	 $this->session->set_flashdata('failed', 'ERROR: Something wrong please refresh your page and try again.');
+					 redirect('toolaids/create/'.$this->input->post('section').'/photo');
+
+	            }
+	        }
+
+			
+
 		}else{
 
 			 $this->session->set_flashdata('failed', 'ERROR: Something wrong please refresh your page and try again.');
@@ -113,13 +168,27 @@ class Toolaids extends CI_Controller {
 
 		$data['title'] = 'Edit Post';
 		
-		$data['post'] = $this->Toolaids_model->get_all_posts($id, $section);
+		if($this->uri->segment(5) === "photo") {
+			
+			$data['post'] = $this->Toolaids_model->get_all_posts($id, $section);
+			$data['posts'] = $this->Toolaids_model->get_all_images($id, $section);
+			
+			if(empty($data['posts'])) {
+			show_404();
+			}
 
+		} else {
+			
+			$data['post'] = $this->Toolaids_model->get_all_posts($id, $section);
+
+			if(empty($data['post'])) {
+			show_404();
+			}
+
+		}
 		//print_r($data['post']);
 		
-		if(empty($data['post'])) {
-			show_404();
-		}
+		
 
 		$this->load->view('member_area/templates/header');
 		$this->load->view('toolaids/edit',$data);
@@ -167,9 +236,9 @@ class Toolaids extends CI_Controller {
 
 	            }
 
-	            $this->Toolaids_model->update($post_file,$this->input->post('section'));
+	            $this->Toolaids_model->update($post_file,$this->input->post('section'),'doc');
 
-	            $this->session->set_flashdata('success', 'Successfully update post.');
+	            $this->session->set_flashdata('success', 'Successfully update data.');
 
 				redirect('toolaids/index');
 
@@ -189,14 +258,24 @@ class Toolaids extends CI_Controller {
 				$this->load->library('video_id');
 				$post_file = $this->video_id->getIdFromUrl($this->input->post('url'));
 
-				$this->Toolaids_model->update($post_file,$this->input->post('section'));
+				$this->Toolaids_model->update($post_file,$this->input->post('section'),'url');
 
-	            $this->session->set_flashdata('success', 'Successfully update video.');
+	            $this->session->set_flashdata('success', 'Successfully update data.');
 
 				redirect('toolaids/index');
 			}
 
-		} else {
+		} elseif (($this->input->post('section') === "meeting") && ($this->input->post('type') === "photo") || ($this->input->post('section') === "asn") && ($this->input->post('type') === "photo") || ($this->input->post('section') === "mobile") && ($this->input->post('type') === "photo") ){
+
+			$post_file = count($this->input->post('id'));
+
+			$this->Toolaids_model->update($post_file,$this->input->post('section'),'photo');
+
+			$this->session->set_flashdata('success', 'Successfully update data.');
+
+				redirect('toolaids/index');
+
+		}else {
 
 			 $this->session->set_flashdata('failed', 'ERROR: Something wrong please refresh your page and try again.');
 			 redirect('toolaids/index');

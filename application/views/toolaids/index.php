@@ -87,6 +87,7 @@
 			<thead>
 				<tr>
 					<th>Title</th>
+					<th>Type</th>
 					<th>Posted on</th>
 					<th>Action</th>
 				</tr>
@@ -94,11 +95,11 @@
 			<tbody>
 			<?php foreach($meetings as $meeting) : ?>
 				<tr>
-					<td class="col-lg-8"><?php echo substr($meeting['title'],0,130); if(strlen($meeting['title']) > 50 ){echo " ...";}else{}?></td>
+					<td class="col-lg-7"><?php echo substr($meeting['title'],0,130); if(strlen($meeting['title']) > 50 ){echo " ...";}else{}?></td>
+					<td class="col-lg-1"><?php echo $meeting['type']; ?></td>
 					<td class="col-lg-1"><?php echo date('M j, Y', strtotime($meeting['created_at'])); ?></td>
 
 					<td  class="col-lg-3">
-						<a class="btn btn-success btn-sm pull-left" href="<?php echo site_url('/toolaids/read/meeting/'.$meeting['id']); ?>">View</a> 
 						<a class="btn btn-warning btn-sm pull-left" href="<?php echo site_url('/toolaids/edit/meeting/'.$meeting['id'].'/'.$meeting['type']); ?>" style="margin-left: 4px;margin-right: 4px;">Edit</a>
 						<a class="btn btn-danger btn-sm" href="<?php echo site_url('toolaids/destroy/'.$meeting['id']);?>">Delete</a> 
 					</td>
@@ -121,6 +122,7 @@
 			<thead>
 				<tr>
 					<th>Title</th>
+					<th>Type</th>
 					<th>Posted on</th>
 					<th>Action</th>
 				</tr>
@@ -128,11 +130,11 @@
 			<tbody>
 			<?php foreach($asns as $asn) : ?>
 				<tr>
-					<td class="col-lg-8"><?php echo substr($asn['title'],0,130); if(strlen($asn['title']) > 50 ){echo " ...";}else{}?></td>
+					<td class="col-lg-7"><?php echo substr($asn['title'],0,130); if(strlen($asn['title']) > 50 ){echo " ...";}else{}?></td>
+					<td class="col-lg-1"><?php echo $asn['type']; ?></td>
 					<td class="col-lg-1"><?php echo date('M j, Y', strtotime($asn['created_at'])); ?></td>
 
 					<td  class="col-lg-3">
-						<a class="btn btn-success btn-sm pull-left" href="<?php echo site_url('/toolaids/read/asn/'.$asn['id']); ?>">View</a> 
 						<a class="btn btn-warning btn-sm pull-left" href="<?php echo site_url('/toolaids/edit/asn/'.$asn['id'].'/'.$asn['type']); ?>" style="margin-left: 4px;margin-right: 4px;">Edit</a>
 						<a class="btn btn-danger btn-sm" href="<?php echo site_url('toolaids/destroy/'.$asn['id']);?>">Delete</a> 
 					</td>
@@ -155,6 +157,7 @@
 			<thead>
 				<tr>
 					<th>Title</th>
+					<th>Type</th>
 					<th>Posted on</th>
 					<th>Action</th>
 				</tr>
@@ -162,11 +165,11 @@
 			<tbody>
 			<?php foreach($mobiles as $mobile) : ?>
 				<tr>
-					<td class="col-lg-8"><?php echo substr($mobile['title'],0,130); if(strlen($mobile['title']) > 50 ){echo " ...";}else{}?></td>
+					<td class="col-lg-7"><?php echo substr($mobile['title'],0,130); if(strlen($mobile['title']) > 50 ){echo " ...";}else{}?></td>
+					<td class="col-lg-1"><?php echo $mobile['type']; ?></td>
 					<td class="col-lg-1"><?php echo date('M j, Y', strtotime($mobile['created_at'])); ?></td>
 
 					<td  class="col-lg-3">
-						<a class="btn btn-success btn-sm pull-left" href="<?php echo site_url('/toolaids/read/mobile/'.$mobile['id']); ?>">View</a> 
 						<a class="btn btn-warning btn-sm pull-left" href="<?php echo site_url('/toolaids/edit/mobile/'.$mobile['id'].'/'.$mobile['type']); ?>" style="margin-left: 4px;margin-right: 4px;">Edit</a>
 						<a class="btn btn-danger btn-sm" href="<?php echo site_url('toolaids/destroy/'.$mobile['id']);?>">Delete</a> 
 					</td>
@@ -176,5 +179,3 @@
 		</table>
     </div>
   </div>
-
-

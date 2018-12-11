@@ -30,7 +30,7 @@
             }
             else {
               echo "<label>Photo</label>
-                    <input type='file' class='form-control-file' name='userfile'  size='20' />
+                    <input type='file' class='form-control-file' name='userfile[]' size='20' multiple />
                     <input type='hidden' name='type'  value='photo' />";
             }
           break;
@@ -43,7 +43,7 @@
             }
             else {
               echo "<label>Photo</label>
-                    <input type='file' class='form-control-file' name='userfile'  size='20' />
+                    <input type='file' class='form-control-file' name='userfile[]' size='20' multiple />
                     <input type='hidden' name='type'  value='photo' />";
             }
           break;
@@ -56,7 +56,7 @@
             }
             else {
               echo "<label>Photo</label>
-                    <input type='file' class='form-control-file' name='userfile'  size='20' />
+                    <input type='file' class='form-control-file' name='userfile[]' size='20' multiple />
                     <input type='hidden' name='type'  value='photo' />";
             }
           break;
