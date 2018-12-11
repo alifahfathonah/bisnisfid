@@ -10,7 +10,7 @@ class About extends CI_Controller {
 		
 		$data['title_agent'] = "Profile";
 		$data['agent'] = $this->Agent_model->get_agent($slug);
-		
+		$data['user'] = $this->uri->segment(2);
 		if(empty($data['agent'])) {
 			redirect('');
 		}

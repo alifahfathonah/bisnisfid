@@ -46,16 +46,31 @@
             <p>
            Kenali lebih lanjut mengenai Sejarah panjang Allianz dalam membantu jutaan keluarga dalam menjaga kestabilan finansial dan proteksi kesehatan.
             </p> 
-            <div class="line">
-                <div class="s-12 m-12 l-12" style="padding-top:20px;">
-                  <?php foreach ($t as $post): ?>
-                  <h3><?= $post['title']; ?><h3>
-                  <p><?= $post['body']; ?></p>
-                  <hr>
-                  <?php endforeach ?>
-                </div>
-            </div>      
           </div>
+          <div class="line">
+            <div class="margin">
+              <?php foreach($t as $post) : ?>
+
+             <a href="<?php echo site_url('/gallery/'.$user.'/'.$post['slug']); ?>">
+              <div class="s-12 m-6 l-4 padding">
+                <div class="image-with-hover-overlay margin-bottom border-articles ">
+                  <div class="image-hover-overlay background-new"> 
+                    <div class="image-style-articles text-center">
+                      <?php if($post['image'] != null){ ?>
+                    <div align=center><img src="<?php echo site_url(); ?>assets/posts/<?php echo $post['image']; ?>" width="12px" ></div>
+                    <?php } ?>
+                      <br>
+                      <p><?php echo $post['title'] ?></p>
+                    </div> 
+                  </div> 
+                  <img src="<?php echo base_url(); ?>assets/img/portfolio/thumb-02.jpg" alt="" title="Portfolio Image 1" />
+                </div>  
+              </div>
+             </a>
+             <?php endforeach; ?>
+            </div>  
+          </div>
+       
         </div> 
       </article>
     </main>
