@@ -1,6 +1,12 @@
 <h2><?= $title ?></h2>
 
-<a class="btn btn-info" href="<?php echo site_url('/products/create'); ?>">Create</a>
+<div class ="row">
+		  <div class="col-lg-12 text-right">
+			<a class="btn btn-info btn-sm" href="<?php echo site_url('/products/create'); ?>">+ Create New Product</a>
+		  </div>
+		</div>
+
+
 
 <table class="table table-hover">
 	<thead>

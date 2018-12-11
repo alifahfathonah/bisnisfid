@@ -10,7 +10,7 @@
     	<br>
     	<div class ="row">
 		  <div class="col-lg-12 text-right">
-			<a class="btn btn-info btn-sm" href="<?php echo site_url('/learning/create'); ?>">Add more video</a>
+			<a class="btn btn-info btn-sm" href="<?php echo site_url('/learning/create'); ?>">+ Add more video</a>
 		  </div>
 		</div>
       	
@@ -44,7 +44,7 @@
       	<br>
       	<div class ="row">
 		  <div class="col-lg-12 text-right">
-			<a class="btn btn-info btn-sm" href="<?php echo site_url('/learning/createfile'); ?>">Add more document</a>
+			<a class="btn btn-info btn-sm" href="<?php echo site_url('/learning/createfile'); ?>">+ Add more document</a>
 		  </div>
 		</div>
       	

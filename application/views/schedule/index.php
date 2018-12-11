@@ -2,7 +2,7 @@
 
 <div class ="row">
 		  <div class="col-lg-12 text-right">
-			<a class="btn btn-info btn-sm" href="<?php echo site_url('/schedule/create'); ?>">Create New Schedule</a>
+			<a class="btn btn-info btn-sm" href="<?php echo site_url('/schedule/create'); ?>">+ Create New Schedule</a>
 		  </div>
 		</div>
 <table class="table table-hover">
