@@ -47,13 +47,13 @@
            Kenali lebih lanjut mengenai Sejarah panjang Allianz dalam membantu jutaan keluarga dalam menjaga kestabilan finansial dan proteksi kesehatan.
             </p> 
             <div class="line">
-              <div class="margin">
-              
-                <div class="s-12 m-6 l-4 padding" align="center">
-                  <p>isinya article dari about allianz</p>
+                <div class="s-12 m-12 l-12" style="padding-top:20px;">
+                  <?php foreach ($t as $post): ?>
+                  <h3><?= $post['title']; ?><h3>
+                  <p><?= $post['body']; ?></p>
+                  <hr>
+                  <?php endforeach ?>
                 </div>
-               
-              </div>
             </div>      
           </div>
         </div> 
