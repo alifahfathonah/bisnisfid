@@ -1,11 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-#Start ALL Schedule FED#
+#Start Tool Aids#
+$route['toolaids/destroy/(:num)'] = 'toolaids/destroy/$1';
+$route['toolaids/edit/(:any)/(:num)/(:any)'] = 'toolaids/edit/$1/$2/$3';
+$route['toolaids/edit/(:any)/(:num)'] = 'toolaids/edit/$1/$2';
+$route['toolaids/create/(:any)/(:any)'] = 'toolaids/create/$1/$2';
+$route['toolaids/create/(:any)'] = 'toolaids/create/$1';
+$route['toolaids'] = 'toolaids/index';
+#End Material Learning#
 
+#Start ALL Schedule FED#
 $route['sdetail/(:any)/(:any)'] = 'sdetail/index/$1/$2';
 $route['sdetail/(:any)'] = 'sdetail/index/$1';
-
 #End Schedule#
 
 #Start Schedule#

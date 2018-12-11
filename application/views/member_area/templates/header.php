@@ -147,9 +147,7 @@ if ($this->session->userdata['logged_in'] === TRUE) {
 
                     <li><a href="http://learning.financialsecurity.id"><i class='glyphicon glyphicon-book'></i>  Learning Hub </a></li>
 
-                    <li><a href="<?php echo base_url(); ?>password"><i class='glyphicon glyphicon-lock'></i>  Change Password</a></li>
-
-                    
+                    <li><a href="<?php echo base_url(); ?>toolaids"><i class='glyphicon glyphicon-wrench'></i>  Tool Aids </a></li>
 
                     <?php
 
@@ -176,7 +174,7 @@ if ($this->session->userdata['logged_in'] === TRUE) {
                     }?>
 
                    
-
+                    <li><a href="<?php echo base_url(); ?>password"><i class='glyphicon glyphicon-lock'></i>  Change Password</a></li>
                     
 
                 </ul>
