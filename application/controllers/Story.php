@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Story extends CI_Controller {
 	
 	public function index() {
-		if($this->uri->segment(2) == "newbp" or $this->uri->segment(2) == "sbp" or $this->uri->segment(2) == "mdit"){
+		if($this->uri->segment(2) == "newbp" || $this->uri->segment(2) == "sbp" || $this->uri->segment(2) == "mdit" || $this->uri->segment(2) == "ddbp" || $this->uri->segment(2) == "tdbp"){
 			$section = $this->uri->segment(2);
 			$data['user'] = 'view';
 			$data['section'] = $section;

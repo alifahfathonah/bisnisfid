@@ -235,7 +235,7 @@
                     }
                     echo $pages;
                   ?>">
-                  Testimoni New BP
+                  Emerald BP
                   </a>
                 </li>
                 <li>
@@ -275,7 +275,7 @@
                     }
                     echo $pages;
                   ?>">
-                Testimoni SBP</a></li>
+                Diamond BP</a></li>
                 <li>
                 <a href="<?php 
                   $slug1  = $this->uri->segment(1); 
@@ -312,9 +312,84 @@
                     }
                     echo $pages;
                   ?>">
-                Testimoni MDIT</a></li>
+                Executive BP</a></li>
+                <li>
+                <a href="<?php 
+                  $slug1  = $this->uri->segment(1); 
+                  $slug2  = $this->uri->segment(2); 
+                  $slug3  = $this->uri->segment(3); 
+                    if($slug1 == "about" AND $slug2 != "") {
+                     $pages = base_url()."story/".$slug2."/ddbp";
+
+                    }elseif($slug1 == "story" AND $slug2 == "view") {
+                      $pages = base_url()."story/ddbp";
+
+                    }elseif($slug1 == "gallery" AND $slug2 == "view") {
+                       $pages = base_url()."story/ddbp";
+                    }elseif($slug1 == "contacts" AND $slug2 != "") {
+                     $pages = base_url()."story/".$slug2."/ddbp";
+
+                    }elseif($slug1 == "sdetail" AND $slug2 != "") {
+                     $pages = base_url()."story/".$slug2."/ddbp";
+
+                    }elseif($slug1 == "gallery" AND $slug2 != "") {
+                     $pages = base_url()."story/".$slug2."/ddbp";
+
+                    }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 != "") {
+                      $pages = base_url()."story/".$slug2."/ddbp";
+
+                    }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
+                      $pages = base_url()."story/ddbp";
+
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                      $pages = base_url()."story/ddbp";
+
+                    }else{
+                      $pages = base_url()."story/".$slug1."/ddbp";
+                    }
+                    echo $pages;
+                  ?>">
+                Double Diamond BP</a></li>
+                <li>
+                  <a href="<?php 
+                    $slug1  = $this->uri->segment(1); 
+                    $slug2  = $this->uri->segment(2); 
+                    $slug3  = $this->uri->segment(3); 
+                      if($slug1 == "about" AND $slug2 != "") {
+                       $pages = base_url()."story/".$slug2."/tdbp";
+
+                      }elseif($slug1 == "story" AND $slug2 == "view") {
+                        $pages = base_url()."story/tdbp";
+
+                      }elseif($slug1 == "gallery" AND $slug2 == "view") {
+                         $pages = base_url()."story/tdbp";
+                      }elseif($slug1 == "contacts" AND $slug2 != "") {
+                       $pages = base_url()."story/".$slug2."/tdbp";
+
+                      }elseif($slug1 == "sdetail" AND $slug2 != "") {
+                       $pages = base_url()."story/".$slug2."/tdbp";
+
+                      }elseif($slug1 == "gallery" AND $slug2 != "") {
+                       $pages = base_url()."story/".$slug2."/tdbp";
+
+                      }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 != "") {
+                        $pages = base_url()."story/".$slug2."/tdbp";
+
+                      }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
+                        $pages = base_url()."story/tdbp";
+
+                      }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                        $pages = base_url()."story/tdbp";
+
+                      }else{
+                        $pages = base_url()."story/".$slug1."/tdbp";
+                      }
+                      echo $pages;
+                    ?>">
+                  Triple Diamond BP</a></li>
               </ul>
             </li>
+            
             <li>
               <a href="
                 <?php 
