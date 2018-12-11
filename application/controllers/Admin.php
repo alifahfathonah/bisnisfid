@@ -51,6 +51,9 @@ Development Team
 		);
 
 		$this->email->send();
+
+		$this->session->set_flashdata('success', 'Successfully accept user');
+
 		redirect('users');
 			
 	}
@@ -58,12 +61,17 @@ Development Team
 	public function reject($id) {
 
 		$this->Admin_model->reject_users($id);
+		$this->session->set_flashdata('success', 'Successfully reject user');
 		redirect('users');
 			
 	}
 	
 	public function deactive($username){
+
 	    $this->Admin_model->deactive_users($username);
+
+	    $this->session->set_flashdata('success', 'Successfully deactive user.');
 		redirect('users');
+
 	}
 }

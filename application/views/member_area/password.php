@@ -1,8 +1,7 @@
 <h2><?= $title; ?></h2>
 <div class="row">
 	<div class="col-lg-6">
-		<?php echo validation_errors(); ?>
-
+	
 		<?php echo form_open('members/update_password'); ?>
 			<div class="form-group">
 		      <label>Old Password</label>

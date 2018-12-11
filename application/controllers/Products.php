@@ -73,7 +73,7 @@ class Products extends CI_Controller {
             }
 
             $this->Product_model->create_post($post_image);
-
+            $this->session->set_flashdata('success', 'Successfully created new product');
             redirect('products');
 			
 		}
@@ -83,6 +83,7 @@ class Products extends CI_Controller {
 	public function delete($id) {
 
 		$this->Product_model->delete_post($id);
+		$this->session->set_flashdata('success', 'Successfully deleted product');
 		redirect('products');
 			
 	}
@@ -131,7 +132,7 @@ class Products extends CI_Controller {
         }
 
 		$this->Product_model->update_post($post_image);
-		
+		$this->session->set_flashdata('success', 'Successfully updated product');
 		redirect('products');
 
 	}

@@ -81,6 +81,7 @@ class Posts extends CI_Controller {
 
             $this->Post_model->create_post($post_image);
 
+            $this->session->set_flashdata('success', 'Successfully created new article');
             redirect('posts');
 			
 		}
@@ -90,6 +91,8 @@ class Posts extends CI_Controller {
 	public function delete($id) {
 
 		$this->Post_model->delete_post($id);
+
+		$this->session->set_flashdata('success', 'Successfully deleted article');
 		redirect('posts');
 			
 	}
@@ -138,6 +141,7 @@ class Posts extends CI_Controller {
 
 		$this->Post_model->update_post($post_image);
 		
+		$this->session->set_flashdata('success', 'Successfully updated article');
 		redirect('posts');
 
 	}

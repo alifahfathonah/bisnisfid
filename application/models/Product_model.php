@@ -33,7 +33,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					'body' => $this->input->post('body'),
 					'section' => $this->input->post('section'),
 					'image' => $post_image,
-					'created_by' => $this->session->userdata('name')
+					'created_by' => $this->session->userdata('name'),
+					'created_at' => date('Y-m-d H:i:s')
 				);
 
 			return $this->db->insert('products', $data);
@@ -59,7 +60,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					'body' => $this->input->post('body'),
 					'section' => $this->input->post('section'),
 					'image' => $post_image,
-					'created_by' => $this->session->userdata('name')
+					'created_by' => $this->session->userdata('name'),
+					'created_at' => date('Y-m-d H:i:s')
 				);
 
 			$this->db->where('id', $this->input->post('id'));

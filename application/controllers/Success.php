@@ -80,6 +80,8 @@ class Success extends CI_Controller {
 
             $this->Success_model->create_post($post_image);
 
+            $this->session->set_flashdata('success', 'Successfully created new story');
+
             redirect('success');
 			
 		}
@@ -89,6 +91,8 @@ class Success extends CI_Controller {
 	public function delete($id) {
 
 		$this->Success_model->delete_post($id);
+
+		 $this->session->set_flashdata('success', 'Successfully deleted story');
 		redirect('success');
 			
 	}
@@ -138,6 +142,7 @@ class Success extends CI_Controller {
 
 		$this->Success_model->update_post($post_image);
 		
+		$this->session->set_flashdata('success', 'Successfully updated story');
 		redirect('success');
 
 	}

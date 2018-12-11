@@ -82,7 +82,7 @@ class Schedule extends CI_Controller {
 
             $this->Schedule_model->create_post($post_image);
 
-           $this->session->set_flashdata('create_success', 'Successfully create new event schedule.');
+           $this->session->set_flashdata('success', 'Successfully create new event schedule.');
             redirect('schedule');			
 					
 			
@@ -93,7 +93,7 @@ class Schedule extends CI_Controller {
 	public function delete($id) {
 
 		$this->Schedule_model->delete_post($id);
-		$this->session->set_flashdata('delete_success', 'Successfully delete data.');
+		$this->session->set_flashdata('success', 'Successfully delete data.');
 		redirect('schedule');
 			
 	}
@@ -158,7 +158,7 @@ class Schedule extends CI_Controller {
         }
 
 		$this->Schedule_model->update_post($post_image);
-		$this->session->set_flashdata('update_success', 'Successfully update data event schedule.');
+		$this->session->set_flashdata('success', 'Successfully update data event schedule.');
 		redirect('schedule');
 
 		}

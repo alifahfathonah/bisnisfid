@@ -11,7 +11,7 @@
 	<div class="tab-content">
 		<div id="biodata" class="tab-pane fade in active">
 			<div class="col-lg-6">
-				<?php echo validation_errors(); ?>
+				
 
 				<?php echo form_open_multipart('members/update_profile'); ?>
 					<div class="form-group">
@@ -88,7 +88,7 @@
 			</div>
 		</div>
 		<div id="about" class="tab-pane fade">
-			<?php echo validation_errors(); ?>
+			
 			
 			<div class="col-lg-10">
 				<?php echo form_open('members/update_about'); ?>
@@ -111,7 +111,7 @@
 			</div>
 		</div>
 		<div id="personal" class="tab-pane fade">
-			<?php echo validation_errors(); ?>
+			
 			
 			<?php foreach($personal as $data) : ?>
 				<div class="col-lg-6">

@@ -67,6 +67,8 @@ class Members extends CI_Controller {
 
 			$this->Member_model->update_profile($post_image);
 			
+			$this->session->set_flashdata('success', 'Successfully update bio data.');
+
 			redirect('member');
 		
 		}
@@ -98,18 +100,24 @@ class Members extends CI_Controller {
 			$this->load->view('member_area/password', $data);
 			$this->load->view('member_area/templates/footer');
 
-		}
+		}else{
 		
-		if($data['agent']['real_password'] != $this->input->post('old')){
+			if($data['agent']['real_password'] != $this->input->post('old')){
+				
+				$this->session->set_flashdata('failed', 'Failed update password, wrong old password.');
+
+				redirect('password');
 			
-			redirect('password');
-		
-		} else {
+			} else {
 
-			$data['password'] = $this->Member_model->update_password();
+				$data['password'] = $this->Member_model->update_password();
 
-			redirect('password');
+				$this->session->set_flashdata('success', 'Successfully update password.');
 
+				redirect('password');
+
+			}
+			
 		}
 
 	}
@@ -140,6 +148,8 @@ class Members extends CI_Controller {
 
         }
 
+        $this->session->set_flashdata('success', 'Successfully update personal article.');
+
 		$this->Agent_model->update_personal($post_image);
 		
 		redirect('member');
@@ -149,6 +159,8 @@ class Members extends CI_Controller {
 
 		$this->Agent_model->update_profile();
 		
+		$this->session->set_flashdata('success', 'Successfully update about data.');
+
 		redirect('member');
 	}
 

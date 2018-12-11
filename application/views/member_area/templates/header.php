@@ -190,3 +190,36 @@ if ($this->session->userdata['logged_in'] === TRUE) {
         <div class="row">
 
           <div class="col-md-12">
+
+            <?php 
+              if($this->session->flashdata('upload_file')){
+                echo "<div class='alert alert-success'><p>".$this->session->flashdata('upload_file')."</p></div> ";
+              }
+              if($this->session->flashdata('upload_video')){
+                echo "<div class='alert alert-success'><p>".$this->session->flashdata('upload_video')."</p></div> ";
+              }
+              if($this->session->flashdata('failed_upload_file')){
+                echo "<div class='alert alert-danger'><p>".$this->session->flashdata('failed_upload_file')."</p></div> ";
+              }
+              if($this->session->flashdata('update_file')){
+                echo "<div class='alert alert-success'><p>".$this->session->flashdata('update_file')."</p></div> ";
+              }
+              if($this->session->flashdata('update_video')){
+                echo "<div class='alert alert-success'><p>".$this->session->flashdata('update_video')."</p></div> ";
+              }
+              if($this->session->flashdata('delete_file')){
+                echo "<div class='alert alert-success'><p>".$this->session->flashdata('delete_file')."</p></div> ";
+              }
+              if($this->session->flashdata('delete_video')){
+                echo "<div class='alert alert-success'><p>".$this->session->flashdata('delete_video')."</p></div> ";
+              }
+               if($this->session->flashdata('success')){
+                echo "<div class='alert alert-success'><p>".$this->session->flashdata('success')."</p></div> ";
+              }
+               if($this->session->flashdata('failed')){
+                echo "<div class='alert alert-danger'><p>".$this->session->flashdata('failed')."</p></div> ";
+              }
+              if(validation_errors() == true){
+                echo "<div class='alert alert-danger'><p>".validation_errors()."</p></div>";
+              }
+            ?>
