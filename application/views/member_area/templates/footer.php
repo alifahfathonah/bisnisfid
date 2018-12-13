@@ -16,7 +16,7 @@
       <script>
 			
 			CKEDITOR.replace( 'editor1', {
-		    extraPlugins: 'embed,autoembed,image2',
+		    extraPlugins: 'embed,autoembed,image2,font',
 			height: 500,
 
 			// Load the default contents.css file plus customizations for this sample.
@@ -35,7 +35,7 @@
 		<script>
 			
 			CKEDITOR.replace( 'ayam35', {
-		    extraPlugins: 'embed,autoembed,image2',
+		    extraPlugins: 'embed,autoembed,image2,font',
 			height: 500,
 
 			// Load the default contents.css file plus customizations for this sample.
@@ -55,7 +55,7 @@
 		<script>
 			
 			CKEDITOR.replace( 'ayam36', {
-		    extraPlugins: 'embed,autoembed,image2',
+		    extraPlugins: 'embed,autoembed,image2,font',
 			height: 500,
 
 			// Load the default contents.css file plus customizations for this sample.
@@ -74,7 +74,7 @@
 		<script>
 			
 			CKEDITOR.replace( 'ayam<?php echo $data['id']; ?>', {
-		    extraPlugins: 'embed,autoembed,image2',
+		    extraPlugins: 'embed,autoembed,image2,font',
 			height: 500,
 
 			// Load the default contents.css file plus customizations for this sample.

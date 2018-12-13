@@ -166,6 +166,9 @@
                     }elseif($slug1 == "contacts" AND $slug2 != "") {
                       $pages = base_url().$slug2;
 
+                    }elseif($slug1 == "tools" AND $slug2 != "") {
+                      $pages = base_url().$slug2;
+
                     }elseif($slug1 == "sdetail" AND $slug2 != "") {
                       $pages = base_url().$slug2;
 
@@ -184,7 +187,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url();
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
                      $pages = base_url();
 
                     }else{
@@ -215,6 +218,9 @@
                     }elseif($slug1 == "contacts" AND $slug2 != "") {
                      $pages = base_url()."story/".$slug2."/newbp";
 
+                    }elseif($slug1 == "tools" AND $slug2 != "") {
+                     $pages = base_url()."story/".$slug2."/newbp";
+
                     }elseif($slug1 == "sdetail" AND $slug2 != "") {
                      $pages = base_url()."story/".$slug2."/newbp";
 
@@ -227,7 +233,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."story/newbp";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."story/newbp";
 
                     }else{
@@ -255,6 +261,9 @@
                     }elseif($slug1 == "contacts" AND $slug2 != "") {
                      $pages = base_url()."story/".$slug2."/sbp";
 
+                    }elseif($slug1 == "tools" AND $slug2 != "") {
+                     $pages = base_url()."story/".$slug2."/sbp";
+
                     }elseif($slug1 == "sdetail" AND $slug2 != "") {
                      $pages = base_url()."story/".$slug2."/sbp";
 
@@ -267,7 +276,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."story/sbp";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."story/sbp";
 
                     }else{
@@ -292,6 +301,12 @@
                     }elseif($slug1 == "contacts" AND $slug2 != "") {
                      $pages = base_url()."story/".$slug2."/mdit";
 
+                    }elseif($slug1 == "tools" AND $slug2 != "") {
+                     $pages = base_url()."story/".$slug2."/mdit";
+
+                    }elseif($slug1 == "contacts" AND $slug2 != "") {
+                     $pages = base_url()."story/".$slug2."/mdit";
+
                     }elseif($slug1 == "sdetail" AND $slug2 != "") {
                      $pages = base_url()."story/".$slug2."/mdit";
 
@@ -304,7 +319,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."story/mdit";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."story/mdit";
 
                     }else{
@@ -326,7 +341,11 @@
 
                     }elseif($slug1 == "gallery" AND $slug2 == "view") {
                        $pages = base_url()."story/ddbp";
+                    
                     }elseif($slug1 == "contacts" AND $slug2 != "") {
+                     $pages = base_url()."story/".$slug2."/ddbp";
+
+                    }elseif($slug1 == "tools" AND $slug2 != "") {
                      $pages = base_url()."story/".$slug2."/ddbp";
 
                     }elseif($slug1 == "sdetail" AND $slug2 != "") {
@@ -341,7 +360,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."story/ddbp";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."story/ddbp";
 
                     }else{
@@ -363,7 +382,11 @@
 
                       }elseif($slug1 == "gallery" AND $slug2 == "view") {
                          $pages = base_url()."story/tdbp";
+                      
                       }elseif($slug1 == "contacts" AND $slug2 != "") {
+                       $pages = base_url()."story/".$slug2."/tdbp";
+
+                      }elseif($slug1 == "tools" AND $slug2 != "") {
                        $pages = base_url()."story/".$slug2."/tdbp";
 
                       }elseif($slug1 == "sdetail" AND $slug2 != "") {
@@ -378,7 +401,7 @@
                       }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                         $pages = base_url()."story/tdbp";
 
-                      }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                      }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                         $pages = base_url()."story/tdbp";
 
                       }else{
@@ -408,6 +431,9 @@
                     }elseif($slug1 == "contacts" AND $slug2 != "") {
                       $pages = base_url()."about/".$slug2;
 
+                    }elseif($slug1 == "tools" AND $slug2 != "") {
+                      $pages = base_url()."about/".$slug2;
+
                     }elseif($slug1 == "gallery" AND $slug2 != "") {
                       $pages = base_url()."about/".$slug2;
 
@@ -420,7 +446,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."about";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
                       $pages = base_url()."about";
                     }else{
                       $pages = base_url()."about/".$slug1;
@@ -438,6 +464,9 @@
                       $pages = base_url()."gallery/".$slug2;
 
                     }elseif($slug1 == "contacts" AND $slug2 != "") {
+                      $pages = base_url()."gallery/".$slug2;
+
+                    }elseif($slug1 == "tools" AND $slug2 != "") {
                       $pages = base_url()."gallery/".$slug2;
 
                     }elseif($slug1 == "sdetail" AND $slug2 != "") {
@@ -461,7 +490,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."gallery";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
                      $pages = base_url()."gallery";
 
                     }else{
@@ -478,6 +507,9 @@
                       $pages = base_url()."tools/".$slug2;
 
                     }elseif($slug1 == "contacts" AND $slug2 != "") {
+                      $pages = base_url()."tools/".$slug2;
+
+                    }elseif($slug1 == "tools" AND $slug2 != "") {
                       $pages = base_url()."tools/".$slug2;
 
                     }elseif($slug1 == "sdetail" AND $slug2 != "") {
@@ -501,7 +533,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."tools";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
                      $pages = base_url()."tools";
 
                     }else{
@@ -528,6 +560,9 @@
                     }elseif($slug1 == "contacts" AND $slug2 != "") {
                       $pages = "http://produk.financialsecurity.id/".$slug2;
 
+                    }elseif($slug1 == "tools" AND $slug2 != "") {
+                      $pages = "http://produk.financialsecurity.id/".$slug2;
+
                     }elseif($slug1 == "sdetail" AND $slug2 != "") {
                       $pages = "http://produk.financialsecurity.id/".$slug2;
 
@@ -540,7 +575,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = "http://produk.financialsecurity.id/";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
                      $pages = "http://produk.financialsecurity.id/";
 
                     }else{

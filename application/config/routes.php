@@ -2,7 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 #Start Tools Aids FED#
-$route['tools/(:any)/(:num)'] = 'tools/index/$1/$2';
 $route['tools/(:any)'] = 'tools/index/$1';
 $route['tools'] = 'tools/index';
 #End Schedule#

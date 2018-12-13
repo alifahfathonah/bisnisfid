@@ -14,9 +14,11 @@ if ($this->session->userdata['logged_in'] === TRUE) {
     <title>X-Panel</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="http://cdn.ckeditor.com/4.8.0/standard-all/ckeditor.js"></script>
-
+    <?php 
+      $page_scripts = array("toolsaids", "users", "learning", "hit", "password");
+      if(!in_array($this->uri->segment(1),$page_scripts))
+        echo "<script src='http://cdn.ckeditor.com/4.8.0/standard-all/ckeditor.js'></script>";
+    ?>
     <link rel="icon" type="image/png" href="<?php echo base_url(); ?>assets/images/16.png">
 
     <!-- Bootstrap -->
