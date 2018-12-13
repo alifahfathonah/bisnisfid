@@ -45,6 +45,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$personal = array('created_by' => $username);
 			$this->db->insert('personal',$personal);
 			$this->db->insert('personal',$personal);
+			$this->db->insert('personal',$personal);
+			$this->db->insert('personal',$personal);
 			$this->db->insert('profile',$personal);
 			
 			$data = array(

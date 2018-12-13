@@ -41,9 +41,21 @@
                          <div class="s-12 m-4 l-4 padding-2x">
 <?php
    $slug1      = $this->uri->segment(2); 
-     if($slug1 != "view") {$ins = "/".$slug1;}else{ $ins= "/view";}
+     if($slug1 != "view") {
+        $ins = "/".$slug1;
+        $action ='gallery/'.$slug1;
+     }
+     else{ 
+      $ins= "/view";
+      $action ='gallery';
+     }
 ?>
                 <div class="margin-bottom" id="list8">
+      <?php echo form_open($action); ?>
+        <input type="text" class="input-search" placeholder="search" name="search" maxlength="255">
+        <button type="submit" class="btn-search">Search</button>
+
+      <?php form_close(); ?>
 		  <div class="head-list"><h3>Services</h3></div>
 		  <ul>
 			<?php foreach($posts as $post):?>

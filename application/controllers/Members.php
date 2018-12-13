@@ -25,10 +25,13 @@ class Members extends CI_Controller {
 		$data['title'] = 'Manage Profile';
 
 		$this->form_validation->set_rules('name', 'Full name', 'trim|required|min_length[3]|max_length[100]');
-		$this->form_validation->set_rules('referral_name', 'Referral name', 'trim|required|min_length[3]|max_length[100]');
-		$this->form_validation->set_rules('polis_no', 'Polis Number', 'trim|required|min_length[2]|max_length[50]');
+		$this->form_validation->set_rules('referral_name', 'Referral name', 'trim|required|min_length[3]|max_length[255]');
+		$this->form_validation->set_rules('polis_no', 'Polis Number', 'trim|required|min_length[2]|max_length[255]');
+		$this->form_validation->set_rules('bp_name', 'Emerald BP Name', 'trim|required|min_length[2]|max_length[255]');
+		$this->form_validation->set_rules('bp_upline', 'BP Upline Direct Name', 'trim|required|min_length[2]|max_length[255]');
+		$this->form_validation->set_rules('kode_unit', 'Kode Unit', 'trim|required|min_length[2]|max_length[255]');
 		$this->form_validation->set_rules('email','Email Address','trim|required|valid_email');
-		$this->form_validation->set_rules('phone', 'Phone Number', 'trim|required|min_length[6]|max_length[20]');
+		$this->form_validation->set_rules('phone', 'Phone Number', 'trim|required|min_length[6]|max_length[255]');
 
 		if($this->form_validation->run() === FALSE) {
 
@@ -147,10 +150,11 @@ class Members extends CI_Controller {
            	$post_image = $this->upload->data('file_name');
 
         }
+        
 
         $this->session->set_flashdata('success', 'Successfully update personal article.');
 
-		$this->Agent_model->update_personal($post_image);
+		$this->Agent_model->update_personal($post_image,$post_image_second);
 		
 		redirect('member');
 	}

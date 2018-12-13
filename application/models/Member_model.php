@@ -12,15 +12,18 @@ class Member_model extends CI_Model {
 	}
 
 	public function update_profile($post_image) {
-
+		
 		$data = array(
 					'name' => $this->input->post('name'),
 					'referral_name' => $this->input->post('referral_name'),
+					'bp_name' => $this->input->post('bp_name'),
+					'bp_upline' => $this->input->post('bp_upline'),
+					'kode_unit' => $this->input->post('kode_unit'),
 					'polis_no' => $this->input->post('polis_no'),
 					'phone' => $this->input->post('phone'),
 					'email' => $this->input->post('email'),
 					'address' => $this->input->post('address'),
-						'url' => $this->input->post('url'),
+					'url' => $this->input->post('url'),
 					'image' => $post_image
 				);
 

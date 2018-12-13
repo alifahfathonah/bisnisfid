@@ -26,9 +26,21 @@
                   <?php if($data['image'] != null){ ?>
                      <img src="<?php echo site_url(); ?>assets/personals/<?php echo $data['image']; ?>" class="imagedropshadow center" style="height:300px;">
                   <?php } ?>
+                  <br>
+                 
                   <p class="margin-top-30">
                   <?php echo $data['body']; ?>
                   </p>
+
+                </div>
+                
+                <?php endforeach; ?>
+                <?php foreach ($personal as $data) : ?>
+                 <div class="s-12 m-6 l-6">
+                  
+                  <figure class="figure">
+                      <iframe width="100%" src="https://www.youtube.com/embed/<?= $video['url']; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </figure>
                 </div>
                 <?php endforeach; ?>
               </div>

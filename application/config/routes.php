@@ -70,6 +70,7 @@ $route['success'] = 'success/index';
 #End Success Story#
 
 #Start Gallery/Articles#
+
 $route['gallery/(:any)/(:any)'] = 'gallery/view/$1/$1';
 $route['gallery/(:any)'] = 'gallery/index/$1';
 $route['gallery'] = 'gallery/index';

@@ -66,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}
 
 		public function get_personal($slug) {
-			$this->db->select('personal.id as id,title,slug,body,personal.image,created_by,created_at,name');
+			$this->db->select('personal.id as id,title,slug,body,personal.image,created_by,created_at,name,personal.url');
 			$this->db->order_by('personal.id', 'ASC');
 			$this->db->join('agents', 'agents.username = personal.created_by');
 			if(empty($this->session->userdata('username'))) {
@@ -94,13 +94,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		public function update_personal($post_image) {
 
-			$slug = url_title($this->input->post('title'));
+			$this->load->library('video_id');
 
+			$slug = url_title($this->input->post('title'));
+			$post_file = $this->video_id->getIdFromUrl($this->input->post('url'));
 			$data = array(
 					'title' => $this->input->post('title'),
 					'slug' => $slug,
 					'body' => $this->input->post('body'),
 					'image' => $post_image,
+					'url' => $post_file,
 					'created_by' => $this->session->userdata('username')
 				);
 

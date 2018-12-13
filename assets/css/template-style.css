@@ -2256,6 +2256,13 @@ video {
   position:relative;
 }
 
+#list8 .input-search{
+  width:200px;
+  margin-left:20px;
+  margin-bottom:20px;
+  position:relative;
+}
+
 .imagedropshadow {
     padding: 5px;
     border: solid 1px #EFEFEF;

@@ -25,6 +25,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 		}
 
+		public function get_posts_search($slug = FALSE,$section) {
+
+			if($slug === FALSE) {
+				
+				$this->db->like('title', $this->input->post('search'));
+				$this->db->order_by('created_at', 'DESC');
+				$this->db->where( array('section' => $section));
+				$query = $this->db->get('posts');
+				return $query->result_array();
+
+			}
+			
+			$query = $this->db->get_where('posts', array('slug' => $slug));
+
+			return $query->row_array();
+			
+		}
+
 		public function get_all_posts($slug = NULL) {
 
 			if($slug === NULL) {
@@ -42,21 +60,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			return $query->row_array();
 		}
 
-		public function get_side_posts() {
+		public function get_side_posts($section) {
 
 							
 				$this->db->order_by('section', 'DESC');
 				$this->db->order_by('created_at', 'DESC');
 				$this->db->limit(10, 10);
-
+				$this->db->where( array('section' => $section));
 				$query = $this->db->get('posts');
 
 				return $query->result_array();
-
+/*
 			
 			$query = $this->db->get_where('posts', array('slug' => $slug));
 
 			return $query->row_array();
+			*/
 		}
 
 
