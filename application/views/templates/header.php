@@ -470,43 +470,46 @@
                     echo $pages;
                   ?>
                 ">Articles</a></li>
-            <!--<li>
-              <a href="
+            <li><a href="
                 <?php 
                   $slug1  = $this->uri->segment(1); 
                   $slug2  = $this->uri->segment(2); 
                     if($slug1 == "about" AND $slug2 != "") {
-                      $pages = base_url()."contacts/".$slug2;
-
-                    }elseif($slug1 == "gallery" AND $slug2 == "view") {
-                       $pages = base_url()."contacts";
-
-                    }elseif($slug1 == "gallery" AND $slug2 != "") {
-                      $pages = base_url()."contacts/".$slug2;
+                      $pages = base_url()."tools/".$slug2;
 
                     }elseif($slug1 == "contacts" AND $slug2 != "") {
-                      $pages = base_url()."contacts/".$slug2;
+                      $pages = base_url()."tools/".$slug2;
+
+                    }elseif($slug1 == "sdetail" AND $slug2 != "") {
+                      $pages = base_url()."tools/".$slug2;
+
+                    }elseif($slug1 == "gallery" AND $slug2 == "view") {
+                       $pages = base_url()."tools";
+
+                    }elseif($slug1 == "gallery" AND $slug2 != "") {
+                      $pages = base_url()."tools/".$slug2;
+
+                    }elseif($slug1 == "gallery" AND $slug2 != "") {
+                      $pages = base_url()."tools/".$slug2;
 
                     }elseif($slug1 == "story" AND $slug2 == "view") {
-                       $pages = base_url()."contacts";
+                       $pages = base_url()."tools";
 
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 != "") {
-                      $pages = base_url()."contacts/".$slug2;
+                      $pages = base_url()."tools/".$slug2;
 
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
-                      $pages = base_url()."contacts";
+                      $pages = base_url()."tools";
 
                     }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
-                     $pages = base_url()."contacts";
+                     $pages = base_url()."tools";
 
                     }else{
-                      $pages = base_url()."contacts/".$slug1;
+                      $pages = base_url()."tools/".$slug1;
                     }
                     echo $pages;
                   ?>
-                ">Contact
-              </a>
-            </li>-->
+                ">Tool Aids</a></li>
 			     <li><a href=
                 "http://bisnis.financialsecurity.id/signin">Sign In</a></li>
                   <li><a href="

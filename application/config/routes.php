@@ -1,6 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+#Start Tools Aids FED#
+$route['tools/(:any)/(:num)'] = 'tools/index/$1/$2';
+$route['tools/(:any)'] = 'tools/index/$1';
+$route['tools'] = 'tools/index';
+#End Schedule#
+
 #Start Tool Aids#
 $route['toolaids/destroy/(:num)'] = 'toolaids/destroy/$1';
 $route['toolaids/edit/(:any)/(:num)/(:any)'] = 'toolaids/edit/$1/$2/$3';

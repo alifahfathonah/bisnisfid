@@ -8,9 +8,14 @@ class Gallery extends CI_Controller {
 		$slug=FALSE;
 
 		if($this->uri->segment(2) != NULL){
+			
 			$data['user'] = $this->uri->segment(2);
 			$data['agent'] = $this->Agent_model->get_agent($this->uri->segment(2));
 			
+			if(empty($data['user'])) {
+				show_404();
+			}
+
 		}else{
 			$data['user'] = "view";
 			$data['agent'] = $this->Agent_model->get_agent($this->uri->segment(2));

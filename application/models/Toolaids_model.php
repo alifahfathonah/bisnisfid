@@ -28,6 +28,40 @@ class Toolaids_model extends CI_Model{
 			
 	}
 
+	public function get_files($section, $type, $slug) {
+		
+		
+
+		if ($section != false && $type != false && $slug != false) {
+			$this->db->order_by('updated_at', 'DESC');
+			$query = $this->db->get_where('toolaids', array('section' => $section,'type' => $type, 'slug' => $slug));
+			
+			return $query->row_array();
+
+		} elseif (($section == false && $type == 'video' && $slug == false) || ($section == false && $type == 'doc' && $slug == false)){
+			$this->db->order_by('updated_at', 'DESC');
+			$query = $this->db->get_where('toolaids', array('type' => $type));
+
+			return $query->result_array();
+		
+		} elseif ($section == false && $type == 'photo' && $slug == false) {
+			$this->db->order_by('toolaids_images.updated_at', 'DESC');
+			$this->db->from('toolaids');
+			$this->db->join('toolaids_images', 'toolaids_images.id_album = toolaids.id');
+			$this->db->where(array('toolaids.type' => $type));
+			
+			$query = $this->db->get();
+
+			return $query->result_array();
+		
+		} else {
+
+			return false;
+
+		}
+	
+	}
+
 	public function get_all_images($id, $section) {
 		
 		$this->db->select('*');
@@ -53,7 +87,8 @@ class Toolaids_model extends CI_Model{
 				'section' => $this->input->post('section'),
 				'type' => $this->input->post('type'),		
 				'created_by' => $this->session->userdata('name'),
-				'created_at' => date('Y-m-d H:i:s')
+				'created_at' => date('Y-m-d H:i:s'),
+				'updated_at' => date('Y-m-d H:i:s')
 			);
 
 		}elseif(($section == "meeting" && $type == "video") || ($section == "asn" && $type == "video") || ($section == "mobile" && $type == "video")) {
@@ -64,7 +99,8 @@ class Toolaids_model extends CI_Model{
 				'section' => $this->input->post('section'),
 				'type' => $this->input->post('type'),		
 				'created_by' => $this->session->userdata('name'),
-				'created_at' => date('Y-m-d H:i:s')
+				'created_at' => date('Y-m-d H:i:s'),
+				'updated_at' => date('Y-m-d H:i:s')
 			);
 		}else{
 			$data = array(
@@ -73,7 +109,8 @@ class Toolaids_model extends CI_Model{
 				'section' => $this->input->post('section'),
 				'type' => $this->input->post('type'),		
 				'created_by' => $this->session->userdata('name'),
-				'created_at' => date('Y-m-d H:i:s')
+				'created_at' => date('Y-m-d H:i:s'),
+				'updated_at' => date('Y-m-d H:i:s')
 			);
 
 		}
