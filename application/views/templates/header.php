@@ -187,7 +187,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url();
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
                      $pages = base_url();
 
                     }else{
@@ -233,7 +233,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."story/newbp";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."story/newbp";
 
                     }else{
@@ -276,7 +276,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."story/sbp";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."story/sbp";
 
                     }else{
@@ -319,7 +319,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."story/mdit";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."story/mdit";
 
                     }else{
@@ -360,7 +360,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."story/ddbp";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."story/ddbp";
 
                     }else{
@@ -401,7 +401,7 @@
                       }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                         $pages = base_url()."story/tdbp";
 
-                      }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                      }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                         $pages = base_url()."story/tdbp";
 
                       }else{
@@ -446,7 +446,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."about";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
                       $pages = base_url()."about";
                     }else{
                       $pages = base_url()."about/".$slug1;
@@ -490,7 +490,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."gallery";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
                      $pages = base_url()."gallery";
 
                     }else{
@@ -499,49 +499,253 @@
                     echo $pages;
                   ?>
                 ">Articles</a></li>
-            <li><a href="
-                <?php 
+                <li><a>Tool Aids</a>
+              <ul>
+                <li>
+                  <a href="<?php 
                   $slug1  = $this->uri->segment(1); 
                   $slug2  = $this->uri->segment(2); 
+                  $slug3  = $this->uri->segment(3); 
                     if($slug1 == "about" AND $slug2 != "") {
-                      $pages = base_url()."tools/".$slug2;
-
-                    }elseif($slug1 == "contacts" AND $slug2 != "") {
-                      $pages = base_url()."tools/".$slug2;
-
-                    }elseif($slug1 == "tools" AND $slug2 != "") {
-                      $pages = base_url()."tools/".$slug2;
-
-                    }elseif($slug1 == "sdetail" AND $slug2 != "") {
-                      $pages = base_url()."tools/".$slug2;
-
-                    }elseif($slug1 == "gallery" AND $slug2 == "view") {
-                       $pages = base_url()."tools";
-
-                    }elseif($slug1 == "gallery" AND $slug2 != "") {
-                      $pages = base_url()."tools/".$slug2;
-
-                    }elseif($slug1 == "gallery" AND $slug2 != "") {
-                      $pages = base_url()."tools/".$slug2;
+                     $pages = base_url()."tools/".$slug2."/book";
 
                     }elseif($slug1 == "story" AND $slug2 == "view") {
-                       $pages = base_url()."tools";
+                      $pages = base_url()."tools/book";
+
+                    }elseif($slug1 == "gallery" AND $slug2 == "view") {
+                      $pages = base_url()."tools/book";
+
+                    }elseif($slug1 == "contacts" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/book";
+
+                    }elseif($slug1 == "sdetail" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/book";
+
+                    }elseif($slug1 == "gallery" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/book";
+
+                    }elseif($slug1 == "story" AND $slug2 == "view") {
+                      $pages = base_url()."tools/book";
 
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 != "") {
-                      $pages = base_url()."tools/".$slug2;
+                      $pages = base_url()."tools/".$slug2."/book";
 
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
-                      $pages = base_url()."tools";
+                      $pages = base_url()."tools/book";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
-                     $pages = base_url()."tools";
+                    }elseif($slug1 == "tools" AND $slug2 == "view") {
+                      $pages = base_url()."tools/book";
+
+                    }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 != "") {
+                      $pages = base_url()."tools/".$slug2."/book";
+
+                    }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 == "") {
+                      $pages = base_url()."tools/book";
+
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                      $pages = base_url()."tools/book";
 
                     }else{
-                      $pages = base_url()."tools/".$slug1;
+                      $pages = base_url()."tools/".$slug1."/book";
                     }
                     echo $pages;
-                  ?>
-                ">Tool Aids</a></li>
+                  ?>">
+                  Buku yang Direkomendasi
+                  </a>
+                </li>
+                <li>
+                  <a href="<?php 
+                  $slug1  = $this->uri->segment(1); 
+                  $slug2  = $this->uri->segment(2); 
+                  $slug3  = $this->uri->segment(3); 
+                    if($slug1 == "about" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/epro";
+
+                    }elseif($slug1 == "story" AND $slug2 == "view") {
+                      $pages = base_url()."tools/epro";
+
+                    }elseif($slug1 == "gallery" AND $slug2 == "view") {
+                      $pages = base_url()."tools/epro";
+
+                    }elseif($slug1 == "contacts" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/epro";
+
+                    }elseif($slug1 == "sdetail" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/epro";
+
+                    }elseif($slug1 == "gallery" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/epro";
+
+                    }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 != "") {
+                      $pages = base_url()."tools/".$slug2."/epro";
+
+                    }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
+                      $pages = base_url()."tools/epro";
+
+                    }elseif($slug1 == "tools" AND $slug2 == "view") {
+                      $pages = base_url()."tools/epro";
+
+                    }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 != "") {
+                      $pages = base_url()."tools/".$slug2."/epro";
+
+                    }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 == "") {
+                      $pages = base_url()."tools/epro";
+
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                      $pages = base_url()."tools/epro";
+
+                    }else{
+                      $pages = base_url()."tools/".$slug1."/epro";
+                    }
+                    echo $pages;
+                  ?>">
+                E-pro</a></li>
+                <li>
+                <a href="<?php 
+                  $slug1  = $this->uri->segment(1); 
+                  $slug2  = $this->uri->segment(2); 
+                  $slug3  = $this->uri->segment(3); 
+                    if($slug1 == "about" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/meeting";
+
+                    }elseif($slug1 == "story" AND $slug2 == "view") {
+                      $pages = base_url()."tools/meeting";
+
+                    }elseif($slug1 == "gallery" AND $slug2 == "view") {
+                       $pages = base_url()."tools/meeting";
+                    }elseif($slug1 == "contacts" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/meeting";
+
+                    }elseif($slug1 == "contacts" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/meeting";
+
+                    }elseif($slug1 == "sdetail" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/meeting";
+
+                    }elseif($slug1 == "gallery" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/meeting";
+
+                    }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 != "") {
+                      $pages = base_url()."tools/".$slug2."/meeting";
+
+                    }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
+                      $pages = base_url()."tools/meeting";
+
+                    }elseif($slug1 == "tools" AND $slug2 == "view") {
+                      $pages = base_url()."tools/meeting";
+
+                    }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 != "") {
+                      $pages = base_url()."tools/".$slug2."/meeting";
+
+                    }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 == "") {
+                      $pages = base_url()."tools/meeting";
+
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                      $pages = base_url()."tools/meeting";
+
+                    }else{
+                      $pages = base_url()."tools/".$slug1."/meeting";
+                    }
+                    echo $pages;
+                  ?>">
+                Pertemuan</a></li>
+                <li>
+                <a href="<?php 
+                  $slug1  = $this->uri->segment(1); 
+                  $slug2  = $this->uri->segment(2); 
+                  $slug3  = $this->uri->segment(3); 
+                    if($slug1 == "about" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/asn";
+
+                    }elseif($slug1 == "story" AND $slug2 == "view") {
+                      $pages = base_url()."tools/asn";
+
+                    }elseif($slug1 == "gallery" AND $slug2 == "view") {
+                       $pages = base_url()."tools/asn";
+                    
+                    }elseif($slug1 == "contacts" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/asn";
+
+                    }elseif($slug1 == "sdetail" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/asn";
+
+                    }elseif($slug1 == "gallery" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/asn";
+
+                    }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 != "") {
+                      $pages = base_url()."tools/".$slug2."/asn";
+
+                    }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
+                      $pages = base_url()."tools/asn";
+
+                    }elseif($slug1 == "tools" AND $slug2 == "view") {
+                      $pages = base_url()."tools/asn";
+
+                    }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 != "") {
+                      $pages = base_url()."tools/".$slug2."/asn";
+
+                    }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 == "") {
+                      $pages = base_url()."tools/asn";
+
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                      $pages = base_url()."tools/asn";
+
+                    }else{
+                      $pages = base_url()."tools/".$slug1."/asn";
+                    }
+                    echo $pages;
+                  ?>">
+                ASN Digital Tools</a></li>
+                <li>
+                  <a href="<?php 
+                    $slug1  = $this->uri->segment(1); 
+                    $slug2  = $this->uri->segment(2); 
+                    $slug3  = $this->uri->segment(3); 
+                      if($slug1 == "about" AND $slug2 != "") {
+                       $pages = base_url()."tools/".$slug2."/mobile";
+
+                      }elseif($slug1 == "story" AND $slug2 == "view") {
+                        $pages = base_url()."tools/mobile";
+
+                      }elseif($slug1 == "gallery" AND $slug2 == "view") {
+                         $pages = base_url()."tools/mobile";
+                      
+                      }elseif($slug1 == "contacts" AND $slug2 != "") {
+                       $pages = base_url()."tools/".$slug2."/mobile";
+
+                      }elseif($slug1 == "sdetail" AND $slug2 != "") {
+                       $pages = base_url()."tools/".$slug2."/mobile";
+
+                      }elseif($slug1 == "gallery" AND $slug2 != "") {
+                       $pages = base_url()."tools/".$slug2."/mobile";
+
+                      }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 != "") {
+                        $pages = base_url()."tools/".$slug2."/mobile";
+
+                      }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
+                        $pages = base_url()."tools/mobile";
+
+                      }elseif($slug1 == "tools" AND $slug2 == "view") {
+                        $pages = base_url()."tools/mobile";
+
+                      }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 != "") {
+                        $pages = base_url()."tools/".$slug2."/mobile";
+
+                      }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 == "") {
+                        $pages = base_url()."tools/mobile";
+
+                      }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                        $pages = base_url()."tools/mobile";
+
+                      }else{
+                        $pages = base_url()."tools/".$slug1."/mobile";
+                      }
+                      echo $pages;
+                    ?>">
+                  Univision Go-mobile apps</a></li>
+              </ul>
+            </li>
+
 			     <li><a href=
                 "http://bisnis.financialsecurity.id/signin">Sign In</a></li>
                   <li><a href="
@@ -575,7 +779,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = "http://produk.financialsecurity.id/";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "tools" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
                      $pages = "http://produk.financialsecurity.id/";
 
                     }else{

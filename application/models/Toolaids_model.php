@@ -38,17 +38,17 @@ class Toolaids_model extends CI_Model{
 			
 			return $query->row_array();
 
-		} elseif (($section == false && $type == 'video' && $slug == false) || ($section == false && $type == 'doc' && $slug == false)){
+		} elseif (($section != false && $type == 'video' && $slug == false) || ($section != false && $type == 'doc' && $slug == false)){
 			$this->db->order_by('updated_at', 'DESC');
-			$query = $this->db->get_where('toolaids', array('type' => $type));
+			$query = $this->db->get_where('toolaids', array('section' => $section, 'type' => $type));
 
 			return $query->result_array();
 		
-		} elseif ($section == false && $type == 'photo' && $slug == false) {
+		} elseif ($section != false && $type == 'photo' && $slug == false) {
 			$this->db->order_by('toolaids_images.updated_at', 'DESC');
 			$this->db->from('toolaids');
 			$this->db->join('toolaids_images', 'toolaids_images.id_album = toolaids.id');
-			$this->db->where(array('toolaids.type' => $type));
+			$this->db->where(array('toolaids.section' => $section,'toolaids.type' => $type));
 			
 			$query = $this->db->get();
 

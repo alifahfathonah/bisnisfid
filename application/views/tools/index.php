@@ -1,4 +1,6 @@
-
+<?php $section_page_doc = array("book","epro"); 
+      $section_page_media = array("meeting","media","mobile");
+?>
     <!-- MAIN -->
     <main role="main">
       <!-- Content -->
@@ -6,10 +8,12 @@
         <header class="section background-dark">
           <div class="line">        
             <h1 class="text-white margin-top-bottom-40 text-size-60 text-line-height-1">Tool Aids</h1>
-            <p class="margin-bottom-0 text-size-16">Pahami Bisnis Kami</p>
+            <p class="margin-bottom-0 text-size-16"><?= $title ?></p>
           </div>  
         </header>
-        <h1>Documents<h1>
+        <?php if(in_array($this->uri->segment(2), $section_page_doc) || in_array($this->uri->segment(3), $section_page_doc)){
+        echo "<h1>Documents<h1>";
+        }?>
         <div class="section background-white"> 
           <div class="line">
             <div class="margin">
@@ -32,7 +36,10 @@
             </div>  
           </div>
         </div> 
-        <h1>Videos<h1>
+        
+        <?php if((in_array($this->uri->segment(2), $section_page_media)) || (in_array($this->uri->segment(3), $section_page_media))){
+        echo "<h1>Videos<h1>";
+        }?>
         <div class="section background-white"> 
           <div class="line">
             <div class="margin">
@@ -60,7 +67,9 @@
             </div>  
           </div>
         </div> 
-		<h1>Pictures<h1>
+		<?php if((in_array($this->uri->segment(2), $section_page_media)) || (in_array($this->uri->segment(3), $section_page_media))){
+        echo "<h1>Pictures<h1>";
+        }?>
 
         <div class="section background-white"> 
           <div class="line">
@@ -86,6 +95,43 @@
           </div>
         </div> 
       </article>
+      <!-- Section 6 -->
+      <?php if($this->uri->segment(2) == "meeting" || $this->uri->segment(3) == "meeting"){
+        echo "
+        <section class='section background-white text-center full-width'>
+        <div class='line'>
+          <h2 class='text-size-50 text-center'>Event Schedule</h2>
+          <hr class='break-small background-primary break-center'>
+          <div class='s-12 m-12 l-12 center text-center'>
+            <table width='100%'>
+              <thead>
+                <tr>
+                  <th width='20%''>Name</th>
+                  <th width='15%'>Location</th>
+                  <th width='15%''>Date</th>
+                  <th>Information</th>
+                </tr>
+              </thead>
+              <tbody>";
+          foreach($schedules as $schedule) :
+          echo "<tr>  
+                  <td ><a href='http://bisnis.financialsecurity.id/sdetail/$schedule[id]'>$schedule[name]</a></td>
+                  <td>$schedule[location]</td>
+                  <td>$schedule[date]</td>
+                  <td>$schedule[desc]</td>
+                </tr>";
+          endforeach;
+          echo "</tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>";
+        }?>
+      
+                
+              
+      <hr class="break margin-top-bottom-0">
     </main>
     
     <!-- FOOTER -->

@@ -4,13 +4,69 @@ class Tools extends CI_Controller {
 	
 	public function index() {
 		
-		if($this->uri->segment(2) != NULL){
+		$page_tools = array("book","epro","meeting","asn","mobile");
+		if(!in_array($this->uri->segment(2), $page_tools)){
+			
+			switch($this->uri->segment(3)){
+				case 'book' :
+					$title = "Buku yang Direkomendasi";
+					$section = "book";
+				break;
+				case 'epro' :
+					$title = "E-Pro";
+					$section = "epro";
+				break;
+				case 'meeting' :
+					$title = "Pertemuan";
+					$section = "meeting";
+				break;
+				case 'asn' :
+					$title = "ASN Digital Tools";
+					$section = "asn";
+				break;
+				case 'mobile' :
+					$title = "Univision Go-mobile apps";
+					$section = "mobile";
+				break;
+				default:
+					$title = null;
+					$section = false;
+				break;
+			}
 
 			$data['user'] = $this->uri->segment(2);
 			$data['agent'] = $this->Agent_model->get_agent($this->uri->segment(2));
 			
 		}else{
 			
+			switch($this->uri->segment(2)){
+				case 'book' :
+					$title = "Buku yang Direkomendasi";
+					$section = "book";
+				break;
+				case 'epro' :
+					$title = "E-Pro";
+					$section = "epro";
+				break;
+				case 'meeting' :
+					$title = "Pertemuan";
+					$section = "meeting";
+				break;
+				case 'asn' :
+					$title = "ASN Digital Tools";
+					$section = "asn";
+				break;
+				case 'mobile' :
+					$title = "Univision Go-mobile apps";
+					$section = "mobile";
+				break;
+				default:
+					$title = null;
+					$section = false;
+				break;
+			}
+			
+
 			$data['user'] = "view";
 			$data['agent'] = $this->Agent_model->get_agent($this->uri->segment(2));
 			$data['emailnya'] = "sonnyarief@gmail.com";
@@ -29,12 +85,13 @@ class Tools extends CI_Controller {
                       ";
 		}
 
-		$datap['title'] = "";
-		$data['videos'] = $this->Toolaids_model->get_files(false, 'video', false);
-		$data['docs'] = $this->Toolaids_model->get_files(false, 'doc', false);
-		$data['photos'] = $this->Toolaids_model->get_files(false, 'photo', false);
-		//$data['photos'] = $this->Toolaids_model->get_all_posts();
+		$data['title'] = $title;
 
+		$data['videos'] = $this->Toolaids_model->get_files($section, 'video', false);
+		$data['docs'] = $this->Toolaids_model->get_files($section, 'doc', false);
+		$data['photos'] = $this->Toolaids_model->get_files($section, 'photo', false);
+		$data['schedules'] = $this->Schedule_model->get_public_posts();
+		
 		$this->load->view('templates/header', $data);
 		$this->load->view('tools/index',$data);
 		$this->load->view('templates/footer');
