@@ -21,30 +21,82 @@
             
             <div class="line margin-top-30">
               <div class="margin">
-                <?php foreach ($personal as $data) : ?>
-                <div class="s-12 m-6 l-6" >
-                  <?php if($data['image'] != null){ ?>
-                     <img src="<?php echo site_url(); ?>assets/personals/<?php echo $data['image']; ?>" class="imagedropshadow center" style="height:300px;">
-                  <?php } ?>
-                  <br>
-                 
-                  <p class="margin-top-30">
-                  <?php echo $data['body']; ?>
-                  </p>
 
-                </div>
-                
-                <?php endforeach; ?>
-                <?php foreach ($personal as $data) : ?>
-                 <div class="s-12 m-6 l-6">
-                  
-                  <figure class="figure">
-                      <iframe width="100%" src="https://www.youtube.com/embed/<?= $video['url']; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </figure>
-                </div>
-                <?php endforeach; ?>
+                <?php 
+                  $i=1;
+                  foreach ($personal as $data) {
+                    if( $i < 3 ) {
+                      echo "<div class='s-12 m-6 l-6'>
+                            <img src='".base_url()."assets/personals/".$data['image']."' class='imagedropshadow center' style='height:300px;''>
+                            <br>
+                            <p class='margin-top-30'>
+                              ".$data['body']."
+                            </p>
+                            </div>
+                          ";
+                    }
+                    $i++;
+                  } ?>
+             
+               </div>
+            </div>   
+            <div class="line margin-top-30">
+              <div class="margin">
+
+                <?php 
+                  $i=1;
+                  foreach ($personal as $data) {
+                    if( $i > 2 ) {
+                      echo "<div class='s-12 m-6 l-6'>
+                            <img src='".base_url()."assets/personals/".$data['image']."' class='imagedropshadow center' style='height:300px;''>
+                            <br>
+                            <p class='margin-top-30'>
+                              ".$data['body']."
+                            </p>
+                            </div>
+                          ";
+                    }
+                    $i++;
+                  } ?>
+             
+               </div>
+            </div>   
+
+            <div class="line margin-top-30">
+              <div class="margin">
+                <?php 
+                  $i=1;
+                  foreach ($personal as $data) {
+                    if( $i < 3 ) {
+                      echo "<div class='s-12 m-6 l-6'>
+                              <figure class='figure'>
+                                <iframe width='100%'' src='https://www.youtube.com/embed/".$data['url']."' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                              </figure>
+                            </div>";
+                    }
+                    $i++;
+                  } ?>
+
               </div>
-            </div>      
+            </div>     
+
+            <div class="line margin-top-30">
+              <div class="margin">
+                <?php 
+                  $i=1;
+                  foreach ($personal as $video) {
+                    if( $i > 2 ) {
+                      echo "<div class='s-12 m-6 l-6'>
+                              <figure class='figure'>
+                                <iframe width='100%'' src='https://www.youtube.com/embed/".$video['url']."' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+                              </figure>
+                            </div>";
+                    }
+                    $i++;
+                  } ?>
+
+              </div>
+            </div>     
           </div>
         </div> 
       </article>

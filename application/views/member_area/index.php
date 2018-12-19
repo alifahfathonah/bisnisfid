@@ -23,15 +23,15 @@
 				      <input type="text" class="form-control" placeholder="Enter sponsor name" name="referral_name" value="<?php echo $agent['referral_name']; ?>" maxlength="255" required>
 				    </div>
 				    <div class="form-group">
-				      <label>Sponsor Name</label>
+				      <label>Emerald BP Name</label>
 				      <input type="text" class="form-control" placeholder="Emerald BP Name" name="bp_name" value="<?php echo $agent['bp_name']; ?>" maxlength="255" required>
 				    </div>
 				    <div class="form-group">
-				      <label>Sponsor Name</label>
+				      <label>BP Upline Direct Name</label>
 				      <input type="text" class="form-control" placeholder="BP Upline Direct Name" name="bp_upline" value="<?php echo $agent['bp_upline']; ?>" maxlength="255" required>
 				    </div>
 				    <div class="form-group">
-				      <label>Sponsor Name</label>
+				      <label>Kode Unit</label>
 				      <input type="text" class="form-control" placeholder="Kode Unit" name="kode_unit" value="<?php echo $agent['kode_unit']; ?>" maxlength="255" required>
 				    </div>
 				    <div class="form-group">

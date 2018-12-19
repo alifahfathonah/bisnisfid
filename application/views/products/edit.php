@@ -31,8 +31,6 @@
       <option value="APK">Asuransi Penyakit Kritis</option>
       <option value="AKL">Asuransi Keluarga Lengkap</option>
       <option value="AS">Asuransi Syariah</option>
-      <option value="ARJ">Asuransi Rawat Jalan</option>
-      <option value="AM">Asuransi Melahirkan</option>
       <option value="AP">Asuransi Pendidikan</option>
     </select>
   </div>
