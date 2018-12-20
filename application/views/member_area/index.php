@@ -58,7 +58,7 @@
 					    <input type="file" name="userfile"  size="20" />
 					  </div>
 				    <div class="form-group">
-				    <button type="submit" class="btn btn-default">Submit</button>
+				    <button type="submit" class="btn btn-primary btn-block">Submit</button>
 					</div>
 				</form>
 			</div>
@@ -105,18 +105,19 @@
 				  
 				  <div class="form-group">
 				    <label>Short</label>
-				    <textarea class="form-control input-lg" name="short" placeholder="Tell about your self" required><?php echo $profile['short']; ?></textarea>
+				    <textarea class="form-control" name="short" placeholder="Tell about your self" rows="10" required><?php echo $profile['short']; ?></textarea>
 				  </div>
 				  <div class="form-group">
 				    <label>Description</label>
-				    <textarea class="form-control input-lg" name="desc" placeholder="Description your life" required><?php echo $profile['desc'];  ?></textarea>
+				    <textarea class="form-control" name="desc" placeholder="Description your life" rows="10" required><?php echo $profile['desc'];  ?></textarea>
 				  </div>
 				  <div class="form-group">
 				    <label>Quotes</label>
-				    <textarea class="form-control input-lg" name="quotes" placeholder="Insert your favorite quotes" required><?php echo $profile['quotes']; ?></textarea>
+				    <textarea class="form-control" name="quotes" placeholder="Insert your favorite quotes" rows="10" required><?php echo $profile['quotes']; ?></textarea>
 				  </div>
-				  <button type="submit" class="btn btn-default">Submit</button>
+				  <button type="submit" class="btn btn-primary btn-block">Submit</button>
 				</form>
+				<br>
 			</div>
 		</div>
 		<div id="personal" class="tab-pane fade">
@@ -150,7 +151,7 @@
 				    <input type="hidden" name="image" value="<?php echo $data['image'];?>">
 				    <input type="file" name="userfile"  size="20" />
 				  </div>
-				  <button type="submit" class="btn btn-default">Submit</button>
+				  <button type="submit" class="btn btn-primary btn-block" style="margin-bottom: 15px;">Submit</button>
 				</form>
 				</div>
 			<?php endforeach; ?>

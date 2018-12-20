@@ -104,9 +104,12 @@ $route['posts/update'] = 'posts/update';
 $route['posts/create'] = 'posts/create';
 $route['posts/(:any)'] = 'posts/view/$1';
 $route['posts'] = 'posts/index';
-#Start Post Articles#
+#End Post Articles#
 
-$route['about/(:any)'] = 'about/index/$1'; //about me replica
+#Start About#
+$route['about/(:any)'] = 'about/index/$1'; 
+$route['about_univision/(:any)'] = 'about/get_univision/$1'; 
+#End About#
 
 $route['articles/(:any)/(:any)'] = 'pages/view_post/$1/$1';
 $route['articles/(:any)'] = 'pages/view_post/$1';

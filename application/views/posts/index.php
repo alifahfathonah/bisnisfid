@@ -9,6 +9,7 @@
     <li class="active"><a data-toggle="pill" href="#home">Produk</a></li>
     <li><a data-toggle="pill" href="#menu1">Bisnis</a></li>
     <li><a data-toggle="pill" href="#menu2">Tentang Allianz</a></li>
+    <li><a data-toggle="pill" href="#menu5">Tentang Univision</a></li>
     <li><a data-toggle="pill" href="#menu3">Keuntungan</a></li>
 <li><a data-toggle="pill" href="#menu4">Fakta Klaim</a></li>
 
@@ -228,6 +229,50 @@
 </table>
 
      </div>
+
+     <div id="menu5" class="tab-pane fade">
+   <table class="table table-hover">
+	<thead>
+		<tr>
+		<th>Title</th>
+		<th>Body</th>
+		<th>Posted on</th>
+		<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+	<?php foreach($u as $post_u) : ?>
+
+		<tr>
+
+			<td class="col-lg-3"><?php echo substr($post_u['title'],0,50); if(strlen($post_u['title']) > 50 ){echo " ...";}else{}?></td>
+			<td class="col-lg-6"><?php echo substr($post_u['title'],0,100); if(strlen($post_u['body']) > 100 ){echo " ...";}else{}?></td>
+			
+			<td class="col-lg-1"><?php echo date('M j, Y', strtotime($post_u['created_at'])); ?></td>
+
+			<td class="col-lg-2">
+
+				<a class="btn btn-success btn-sm pull-left" href="<?php echo site_url('/posts/view/'.$post_u['slug']); ?>">View</a> 
+
+				<a class="btn btn-warning btn-sm pull-left" href="<?php echo site_url('/posts/edit/'.$post_u['slug']); ?>" style="margin-left: 4px;margin-right: 4px;">Edit</a>
+
+				<?php echo form_open('/posts/delete/'.$post_u['id']); ?>
+
+					<input type="submit" value="Delete" class="btn btn-danger btn-sm">
+
+				</form>
+
+			</td>
+
+		</tr>
+
+<?php endforeach; ?>
+
+	</tbody>
+
+</table>
+
+    </div>
 
   </div>
 </div>

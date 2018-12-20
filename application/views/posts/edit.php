@@ -13,12 +13,19 @@
   <div class="form-group">
     <label>Section</label>
     <select name="section" class="form-control" required>
-      <option value="<?php echo $post['section']; ?>"><?php if($post['section']=="b"){echo "Business";}else{echo"Product";} ?></option>
-            <option value="b">Bisnis</option>
+      <option value="<?php echo $post['section']; ?>">
+      <?php if($post['section']=="b"){echo "Business";}
+      elseif($post['section']=="t"){echo"Tentang Allianz";}
+      elseif($post['section']=="u"){echo"Tentang Univision";}
+      elseif($post['section']=="k"){echo"Keuntungan";}
+      elseif($post['section']=="f"){echo"Fakta Klaim";}
+      else{echo"Product";} ?></option>
+      <option value="b">Bisnis</option>
       <option value="p">Produk</option>
-<option value="t">Tentang Allianz</option>
-<option value="k">Keuntungan</option>
-<option value="f">Fakta Klaim</option>
+      <option value="t">Tentang Allianz</option>
+      <option value="u">Tentang Univision</option>
+      <option value="k">Keuntungan</option>
+      <option value="f">Fakta Klaim</option>
     </select>
   </div>
   <div class="form-group">

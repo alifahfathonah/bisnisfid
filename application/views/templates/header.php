@@ -163,6 +163,9 @@
                     if($slug1 == "about" AND $slug2 != "") {
                       $pages = base_url().$slug2;
 
+                    }elseif($slug1 == "about_univision" AND $slug2 != "") {
+                      $pages = base_url().$slug2;
+
                     }elseif($slug1 == "contacts" AND $slug2 != "") {
                       $pages = base_url().$slug2;
 
@@ -187,7 +190,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url();
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
                      $pages = base_url();
 
                     }else{
@@ -207,6 +210,9 @@
                   $slug2  = $this->uri->segment(2); 
                   $slug3  = $this->uri->segment(3); 
                     if($slug1 == "about" AND $slug2 != "") {
+                     $pages = base_url()."story/".$slug2."/newbp";
+
+                    }elseif($slug1 == "about_univision" AND $slug2 != "") {
                      $pages = base_url()."story/".$slug2."/newbp";
 
                     }elseif($slug1 == "story" AND $slug2 == "view") {
@@ -233,7 +239,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."story/newbp";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."story/newbp";
 
                     }else{
@@ -250,6 +256,9 @@
                   $slug2  = $this->uri->segment(2); 
                   $slug3  = $this->uri->segment(3); 
                     if($slug1 == "about" AND $slug2 != "") {
+                     $pages = base_url()."story/".$slug2."/sbp";
+
+                    }elseif($slug1 == "about_univision" AND $slug2 != "") {
                      $pages = base_url()."story/".$slug2."/sbp";
 
                     }elseif($slug1 == "story" AND $slug2 == "view") {
@@ -276,7 +285,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."story/sbp";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."story/sbp";
 
                     }else{
@@ -291,6 +300,9 @@
                   $slug2  = $this->uri->segment(2); 
                   $slug3  = $this->uri->segment(3); 
                     if($slug1 == "about" AND $slug2 != "") {
+                     $pages = base_url()."story/".$slug2."/mdit";
+
+                    }elseif($slug1 == "about_univision" AND $slug2 != "") {
                      $pages = base_url()."story/".$slug2."/mdit";
 
                     }elseif($slug1 == "story" AND $slug2 == "view") {
@@ -319,7 +331,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."story/mdit";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."story/mdit";
 
                     }else{
@@ -334,6 +346,9 @@
                   $slug2  = $this->uri->segment(2); 
                   $slug3  = $this->uri->segment(3); 
                     if($slug1 == "about" AND $slug2 != "") {
+                     $pages = base_url()."story/".$slug2."/ddbp";
+
+                    }elseif($slug1 == "about_univision" AND $slug2 != "") {
                      $pages = base_url()."story/".$slug2."/ddbp";
 
                     }elseif($slug1 == "story" AND $slug2 == "view") {
@@ -360,7 +375,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."story/ddbp";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."story/ddbp";
 
                     }else{
@@ -375,6 +390,9 @@
                     $slug2  = $this->uri->segment(2); 
                     $slug3  = $this->uri->segment(3); 
                       if($slug1 == "about" AND $slug2 != "") {
+                       $pages = base_url()."story/".$slug2."/tdbp";
+
+                      }elseif($slug1 == "about_univision" AND $slug2 != "") {
                        $pages = base_url()."story/".$slug2."/tdbp";
 
                       }elseif($slug1 == "story" AND $slug2 == "view") {
@@ -401,7 +419,7 @@
                       }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                         $pages = base_url()."story/tdbp";
 
-                      }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                      }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                         $pages = base_url()."story/tdbp";
 
                       }else{
@@ -412,14 +430,17 @@
                   Triple Diamond BP</a></li>
               </ul>
             </li>
-            
-            <li>
-              <a href="
-                <?php 
+            <li><a>About</a>
+              <ul>
+                <li>
+                  <a href="<?php 
                   $slug1  = $this->uri->segment(1); 
                   $slug2  = $this->uri->segment(2); 
                     
-                   if($slug1 == "about" AND $slug2 != "") {
+                    if($slug1 == "about" AND $slug2 != "") {
+                      $pages = base_url()."about/".$slug2;
+
+                    }elseif($slug1 == "about_univision" AND $slug2 != "") {
                       $pages = base_url()."about/".$slug2;
 
                     }elseif($slug1 == "story" AND $slug2 == "view") {
@@ -446,21 +467,69 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."about";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
                       $pages = base_url()."about";
                     }else{
                       $pages = base_url()."about/".$slug1;
                     }
                     echo $pages;
-                  ?>
-                ">Contact
-              </a>
+                  ?>">
+                  About Me
+                  </a>
+                </li>
+                <li>
+                  <a href="<?php 
+                  $slug1  = $this->uri->segment(1); 
+                  $slug2  = $this->uri->segment(2); 
+                    
+                    if($slug1 == "about" AND $slug2 != "") {
+                      $pages = base_url()."about_univision/".$slug2;
+
+                    }elseif($slug1 == "about_univision" AND $slug2 != "") {
+                      $pages = base_url()."about_univision/".$slug2;
+
+                    }elseif($slug1 == "story" AND $slug2 == "view") {
+                       $pages = base_url()."about_univision/";
+
+                    }elseif($slug1 == "gallery" AND $slug2 == "view") {
+                       $pages = base_url()."about_univision";
+
+                    }elseif($slug1 == "contacts" AND $slug2 != "") {
+                      $pages = base_url()."about_univision/".$slug2;
+
+                    }elseif($slug1 == "tools" AND $slug2 != "") {
+                      $pages = base_url()."about_univision/".$slug2;
+
+                    }elseif($slug1 == "gallery" AND $slug2 != "") {
+                      $pages = base_url()."about_univision/".$slug2;
+
+                    }elseif($slug1 == "sdetail" AND $slug2 != "") {
+                      $pages = base_url()."about_univision/".$slug2;
+
+                    }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 != "") {
+                      $pages = base_url()."about_univision/".$slug2;
+
+                    }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
+                      $pages = base_url()."about_univision";
+
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                      $pages = base_url()."about_univision";
+                    }else{
+                      $pages = base_url()."about_univision/".$slug1;
+                    }
+                    echo $pages;
+                  ?>">
+                About Univision</a></li>
+              </ul>
             </li>
             <li><a href="
                 <?php 
                   $slug1  = $this->uri->segment(1); 
                   $slug2  = $this->uri->segment(2); 
                     if($slug1 == "about" AND $slug2 != "") {
+                      $pages = base_url()."gallery/".$slug2;
+
+                    }elseif($slug1 == "about_univision" AND $slug2 != "") {
                       $pages = base_url()."gallery/".$slug2;
 
                     }elseif($slug1 == "contacts" AND $slug2 != "") {
@@ -490,7 +559,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."gallery";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
                      $pages = base_url()."gallery";
 
                     }else{
@@ -509,6 +578,9 @@
                     if($slug1 == "about" AND $slug2 != "") {
                      $pages = base_url()."tools/".$slug2."/book";
 
+                    }elseif($slug1 == "about_univision" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/book";
+
                     }elseif($slug1 == "story" AND $slug2 == "view") {
                       $pages = base_url()."tools/book";
 
@@ -542,7 +614,7 @@
                     }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."tools/book";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."tools/book";
 
                     }else{
@@ -561,6 +633,9 @@
                     if($slug1 == "about" AND $slug2 != "") {
                      $pages = base_url()."tools/".$slug2."/epro";
 
+                    }elseif($slug1 == "about_univision" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/epro";
+
                     }elseif($slug1 == "story" AND $slug2 == "view") {
                       $pages = base_url()."tools/epro";
 
@@ -591,7 +666,7 @@
                     }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."tools/epro";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."tools/epro";
 
                     }else{
@@ -606,6 +681,9 @@
                   $slug2  = $this->uri->segment(2); 
                   $slug3  = $this->uri->segment(3); 
                     if($slug1 == "about" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/meeting";
+
+                    }elseif($slug1 == "about_univision" AND $slug2 != "") {
                      $pages = base_url()."tools/".$slug2."/meeting";
 
                     }elseif($slug1 == "story" AND $slug2 == "view") {
@@ -640,7 +718,7 @@
                     }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."tools/meeting";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."tools/meeting";
 
                     }else{
@@ -655,6 +733,9 @@
                   $slug2  = $this->uri->segment(2); 
                   $slug3  = $this->uri->segment(3); 
                     if($slug1 == "about" AND $slug2 != "") {
+                     $pages = base_url()."tools/".$slug2."/asn";
+
+                    }elseif($slug1 == "about_univision" AND $slug2 != "") {
                      $pages = base_url()."tools/".$slug2."/asn";
 
                     }elseif($slug1 == "story" AND $slug2 == "view") {
@@ -687,7 +768,7 @@
                     }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 == "") {
                       $pages = base_url()."tools/asn";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                       $pages = base_url()."tools/asn";
 
                     }else{
@@ -702,6 +783,9 @@
                     $slug2  = $this->uri->segment(2); 
                     $slug3  = $this->uri->segment(3); 
                       if($slug1 == "about" AND $slug2 != "") {
+                       $pages = base_url()."tools/".$slug2."/mobile";
+
+                      }elseif($slug1 == "about_univision" AND $slug2 != "") {
                        $pages = base_url()."tools/".$slug2."/mobile";
 
                       }elseif($slug1 == "story" AND $slug2 == "view") {
@@ -734,7 +818,7 @@
                       }elseif($slug1 == "tools" AND $slug2 != "" AND $slug3 == "") {
                         $pages = base_url()."tools/mobile";
 
-                      }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
+                      }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup" OR $slug1 == "") {
                         $pages = base_url()."tools/mobile";
 
                       }else{
@@ -753,6 +837,9 @@
                   $slug1  = $this->uri->segment(1); 
                   $slug2  = $this->uri->segment(2); 
                     if($slug1 == "about" AND $slug2 != "") {
+                      $pages = "http://produk.financialsecurity.id/".$slug2;
+
+                    }elseif($slug1 == "about_univision" AND $slug2 != "") {
                       $pages = "http://produk.financialsecurity.id/".$slug2;
 
                     }elseif($slug1 == "gallery" AND $slug2 == "view") {
@@ -779,7 +866,7 @@
                     }elseif($slug1 == "story" AND $slug2 != "" AND $slug3 == "") {
                       $pages = "http://produk.financialsecurity.id/";
 
-                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
+                    }elseif($slug1 == "contacts" OR $slug1 == "sdetail" OR $slug1 == "gallery" OR $slug1 == "about" OR $slug1 == "about_univision" OR $slug1 == "forgot" OR $slug1 == "signin" OR $slug1 == "signup") {
                      $pages = "http://produk.financialsecurity.id/";
 
                     }else{

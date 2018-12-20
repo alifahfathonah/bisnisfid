@@ -12,6 +12,7 @@ class Posts extends CI_Controller {
 		$data['p'] = $this->Post_model->get_posts(false,'p');
 		$data['b'] = $this->Post_model->get_posts(false,'b');
 		$data['t'] = $this->Post_model->get_posts(false,'t');
+		$data['u'] = $this->Post_model->get_posts(false,'u');
 		$data['k'] = $this->Post_model->get_posts(false,'k');
 		$data['f'] = $this->Post_model->get_posts(false,'f');
 
