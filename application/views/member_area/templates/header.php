@@ -153,7 +153,7 @@ if ($this->session->userdata['logged_in'] === TRUE) {
 
                     <?php
 
-                    if($_SESSION['id'] == 1) {
+                    if($_SESSION['role'] == 1) {
 
                       echo "
 
